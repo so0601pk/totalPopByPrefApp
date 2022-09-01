@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  yumemi_nuxt_app:
+    build: ./docker/nuxt
+    ports:
+      - 9000:3000
+    volumes:
+      - ./src:/workspaces
+    working_dir: /workspaces
+    # command: yarn run dev
+    tty: true
